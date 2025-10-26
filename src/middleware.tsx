@@ -3,7 +3,6 @@ import { Navigate } from "react-router-dom";
 import { getToken } from "./lib/utils";
 
 export function PrivateRoute({ children }: Readonly<{ children: ReactNode }>) {
-	console.log(getToken());
 	if (!getToken()) {
 		return <Navigate to={"/login"} />;
 	}

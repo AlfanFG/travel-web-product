@@ -7,40 +7,40 @@ import { toast } from "react-toastify";
 import type { PutCategoryProps } from ".";
 
 const putCategory = ({ documentId, data }: PutCategoryProps) => {
-  return API.put(`/categories/${documentId}`, { data });
+	return API.put(`/categories/${documentId}`, { data });
 };
 
 export const usePutCategory = ({
-  afterSuccess,
+	afterSuccess,
 }: {
-  afterSuccess: () => void;
+	afterSuccess: () => void;
 }) => {
-  const queryCLient = useQueryClient();
+	const queryCLient = useQueryClient();
 
-  return useMutation({
-    mutationFn: putCategory,
-    onSuccess: () => {
-      queryCLient.invalidateQueries({
-        queryKey: ["categories"],
-      });
-      console.log("success");
-      afterSuccess();
-      toast.success(`Categories has been updated successfully!`);
-    },
-    onError: (
-      error: AxiosError<{
-        error: {
-          details?: { errors?: { message: string }[] };
-          message: string;
-        };
-      }>
-    ) => {
-      const errorMessage =
-        error.response?.data?.error?.details?.errors?.map(
-          (item) => `<li key={${item.message}}>${item.message}</li>`
-        ) || error.response?.data?.error?.message;
+	return useMutation({
+		mutationFn: putCategory,
+		onSuccess: () => {
+			queryCLient.invalidateQueries({
+				queryKey: ["categories"],
+			});
 
-      toast.error(`<ul>${errorMessage}</ul>`);
-    },
-  });
+			afterSuccess();
+			toast.success(`Categories has been updated successfully!`);
+		},
+		onError: (
+			error: AxiosError<{
+				error: {
+					details?: { errors?: { message: string }[] };
+					message: string;
+				};
+			}>
+		) => {
+			const errorMessage =
+				error.response?.data?.error?.details?.errors?.map(
+					(item) => `<li key={${item.message}}>${item.message}</li>`
+				) || error.response?.data?.error?.message;
+
+			toast.error(`<ul>${errorMessage}</ul>`);
+		},
+	});
 };

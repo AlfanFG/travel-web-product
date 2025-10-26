@@ -39,7 +39,6 @@ export default function LoginForm() {
 	});
 
 	const handleCheck = (checked: boolean) => {
-		console.log("Remember me:", checked);
 		setRememberMe(checked);
 	};
 

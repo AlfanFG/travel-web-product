@@ -1,0 +1,8 @@
+cat <<EOF > .env.local
+VITE_APP_BASE_URL=https://extra-brooke-yeremiadio-46b2183e.koyeb.app/api
+VITE_APP_CLOUD_NAME=dnt8eeqxj
+VITE_APP_CLOUD_PRESET=travel_app
+VITE_APP_API_KEY=458957252146623
+VITE_APP_API_SECRET=714PMiZBpH4bvPPsmf-OVrb8-FE
+VITE_APP_ENV_VAR=CLOUDINARY_URL=cloudinary://458957252146623:714PMiZBpH4bvPPsmf-OVrb8-FE@dnt8eeqxj
+EOF
