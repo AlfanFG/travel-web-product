@@ -38,6 +38,7 @@ Frontend Developer
 1. Soal Essay
    
    a. Jelaskan pemahaman Anda mengenai Props dengan Typescript ?
+   
    b. Jelaskan pemahaman Anda mengenai TanStack?
    
    Jawaban :
