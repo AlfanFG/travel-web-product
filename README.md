@@ -36,8 +36,12 @@ Alfan Faturahman Gifary
 Frontend Developer
 
 1. Soal Essay
+   
    a. Jelaskan pemahaman Anda mengenai Props dengan Typescript ?
    b. Jelaskan pemahaman Anda mengenai TanStack?
+   
    Jawaban :
+   
    a. Props atau kepanjangan dari properties dalam typescript merupakan suatu data yang di passing atau dikirimkan melalui component parent ke component child. Dalam typescript props harus mendefinisikan type data atau interface agar compiler dapat mengenali tipe data yang sedang digunakan dalam codingan yang dapat membantu programmer mengurangi kesalahan pada saat mengerjakan code atau pada saat build aplikasi.
+   
    b. Tanstack Adalah suatu komunitas yang memiliki suatu produk open source yang digunakan untuk web development dan dapat di install melalui (npm) node package manager. Produknya sudah membantu para web developer mengerjakan projectnya dengan lebih mudah dan efisien, mulai dari salah satu package TanStack yaitu TanStack Query yang membantu para developers untuk mempermudah mengerjakan logic integrasi API (Fetching, Caching, Stale Data, dll). Dan juga masih banyak produk dari TanStack yaitu TanStack Table, Form, Router, dll, yang tentunya membantu para web developers menyelesaikan pekerjaannya secara lebih efisien dan dapat menghemat banyak waktu pengerjaan.
